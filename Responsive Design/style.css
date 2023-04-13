@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --blue: #23A6F0;
+    --white: #fff;
+    --bold:700;
+    --lightweight:400;
+    --medium:500;
+    --bolder:800,
+    --primary: #252B42;
+    --color:#737373;
+    --heading-color:#252B42;
+
+}
+body{
+    background-color: #f3f3f3;
+
+}
+.main{
+    width: 100%;
+    height: 100vh;
+}
+
+.main .hero{
+    width: 100%;
+    height: 100%;
+    background: url('./images/hero.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    /* background-color: #23A6F0; */
+    /* position:absolute; */
+}
+
+.main .hero::before{
+    content:"";
+    inset:0;
+    position: absolute;
+    background: rgba(0,0,0,.6);
+   
+}
+.container{
+    width:80%;
+    margin: 0 auto;
+    /* background: red; */
+    height: 100%;
+}
+
+.container .hero-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    /* background:blue; */
+}
+
+.container .hero-content .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* position: sticky;
+    z-index:1; */
+    z-index:1;
+}
+.container .hero-content .header .left{
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 5rem;
+    align-items: center;
+    width:60%;
+    /* background-color: red; */
+    padding: .4rem;
+}
+
+.container .hero-content .header .left .logo{
+    color: var(--white);
+    /* width: 20%; */
+    font-size: 1.5rem;
+    font-weight: var(--lightweight);
+    display: flex;
+    justify-content:center;
+    align-items:center;
+
+}
+.container .hero-content .header .left .nav ul {
+    display:flex;
+    /* justify-content:space-between;
+    align-items:center; */
+    /* gap:10px; */
+    gap : 1rem;
+    list-style:none;
+    width: 70%;
+    /* background:red; */
+    width:100%;
+}
+.container .hero-content .header .left .nav ul li a{
+    display: flex;
+    justify-content:space-between;
+    /* background: red; */
+    padding: .3rem;
+    text-decoration:none;
+    color: var(--white);
+    font-size: 1.05rem;
+    font-weight: var(--lightweight);
+
+}
+
+.container .hero-content .header .right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background: blue; */
+    width:26%;
+}
+
+.container .hero-content .header .right h5{
+     font-size: 1.05rem;
+     font-weight: var(--lightweight);
+     color: var(--white);
+}
+
+.container .hero-content .header .right .cta{
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+    width: 10rem;
+    gap: .225rem;
+    color: var(--white);
+    padding: .5rem;
+    background: var(--blue);
+    outline:none;
+    border:none;
+    padding: .5rem;
+    font-size: .9rem;
+}
+
+.container .hero-content .header .right .cta:hover{
+    background: var(--white);
+    color: var(--blue);
+}
+.hero-content .hero-mid-content{
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    width: 43%;
+    margin : 8.125rem auto;
+    color: var(--white);
+    z-index: 1;
+    padding: .9rem;
+    /* background: blue; */
+}
+.hero-content .hero-mid-content .top {
+    padding: .5rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    /* background:red; */
+}
+.hero-content .hero-mid-content .top h1{
+    line-height: 3rem;
+    font-weight: var(--bolder);
+    font-size: 3rem;
+    /* background:red; */
+    padding: .5rem;
+    text-align:center;
+}
+
+.hero-content .hero-mid-content .bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    padding: .5rem;
+    /* background:red; */
+    gap: 1.2rem
+}
+.hero-content .hero-mid-content .bottom p{
+    font-size: 1.1rem;
+    font-weight: var(--medium);
+    line-height: 1.2rem;
+    text-align:center;
+    padding: .5rem;
+    /* background:red; */
+}
+
+.hero-content .hero-mid-content .bottom .buttons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1.2rem;
+    width: 22rem;
+    /* background:blue; */
+}
+
+.hero-content .hero-mid-content .bottom .buttons .btn{
+    width: 10rem;
+    gap: .225rem;
+    color: var(--white);
+    padding: .4rem;
+    padding: .625rem;
+    font-size:0.9rem;
+    border-radius: 1rem;
+}
+
+.hero-content .hero-mid-content .bottom .buttons .rounded{
+    background: var(--blue);
+    outline:none;
+    border:none;
+}
+
+.hero-content .hero-mid-content .bottom .buttons .rounded:hover{
+    background-color: transparent;
+    border: 1px solid #23A6F0;
+}
+.hero-content .hero-mid-content .bottom .outlined{
+    /* outline: 1px solid #fff; */
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+.hero-content .hero-mid-content .bottom .outlined:hover{ 
+    background: var(--blue);
+    outline:none;
+    border:none;
+}
+
+
+.main .relative{
+    
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: space-around;
+    align-items:center;
+    gap: 2rem;
+    top: -18vh;
+    width:80%;
+    margin: 0 auto;
+    /* background: red; */
+    height: 30%;
+    padding: .5rem;
+}
+
+.main .relative .card{
+    background-color: #fff;
+    height: 14rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    line-height: 1.8rem;
+    padding:2rem;
+}
+.main .relative .card h2{
+    font-size: 1.4rem;
+    color: var(--heading-color);
+}
+.main .relative .card p{
+    font-size:1.1rem;
+    color: var(--color);
+}
+.main .relative .card .icon-container ion-icon{
+    font-size: 4rem;
+    color:var(--blue)
+}
+.main .products{
+    background-color: white;
+    height: 38%;
+    margin-bottom: 10vh;
+    /* margin-top: -10vh; */
+}
+ .main .products .product{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: space-around;
+    align-items:center;
+    gap: 2rem;
+    /* width:80%; */
+    /* margin: 0 auto; */
+    /* background: red; */
+    height: 30%;
+    padding: 1rem .5rem;
+ }
+ .main .products .product .card-1{
+    background-color: red;
+    height: 14rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:2rem;
+
+ }
+
+.main .products .product .card-1 .icon-container ion-icon{
+    font-size: 4rem;
+    color:var(--blue)
+}
+
+.main .products .product .card-1 h2{
+    font-size: 1.4rem;
+    color: var(--heading-color);
+}
+.main .products .product .card-1 p {
+    font-size:1.1rem;
+    color: var(--color)
+}
+
+.main .industry{
+    background-color: red;
+}
