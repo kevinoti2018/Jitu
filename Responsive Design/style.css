@@ -368,13 +368,7 @@ body{
 }
 
 .main .industry .industry-top{
-    /* width: 30rem; */
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: center; */
     text-align: center;
-    /* background-color: #fff; */
 }
 .main .industry .industry-top h1{
     font-size: 2.1rem;
@@ -511,9 +505,13 @@ body{
     color:white;
 }
 
+
 .main .pricing .prices-bottom .pricing-card .top h1{
     font-size: 1.4rem;
     color: var(--heading-color);
+}
+.main .pricing .prices-bottom .dark .top h1{
+    color: white;
 }
 .main .pricing .prices-bottom .pricing-card .text{
     width:9.7rem;
@@ -521,8 +519,11 @@ body{
     font-size:1.1rem;
     text-align:center;
      color: var(--color);
-    
+  
     /* background:red; */
+}
+.main .pricing .prices-bottom .dark .top .text{
+    color: white;
 }
 
 .main .pricing .prices-bottom .pricing-card .price .blue{
@@ -790,22 +791,6 @@ body{
 
 
 @media screen and (max-width:770px){
-    h1{
-        font-size:1.1rem;
-        font-weight:700;
-    }
-    h2{
-       font-size:1.1rem;
-        font-weight:700; 
-    }
-    h4{
-        font-size:1rem;
-        font-weight:700;
-    }
-    h5{
-        font-size:1rem;
-        font-weight:700;
-    }
 
     .main .hero-content .nav{
         visibility:hidden;
@@ -946,13 +931,9 @@ body{
     .main .news-letter .news-bottom .right {
         display: flex;
         padding: .5rem;
-        /* flex-direction: column;
-        align-items: center;
-        justify-content: center; */
     }
     .main .news-letter .news-bottom .right input{
         width: 10rem;
-
     }
     .main .news-letter .news-bottom .right button{
        /* position: fixed; */
@@ -997,9 +978,132 @@ body{
     }
 }
 
-@media screen and (max-width: 1100px){
+@media screen and (max-width: 1150px) and (min-width: 770px){
+    .main .hero-content .nav{
+        visibility:hidden;
+    }
+    .main .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    .main .hero{
+        background-position: center;
+        background-size:cover;
+    }
+    .main .hero-content .right{
+        visibility: hidden;
+    }
+    .main .hero-content .left .logo{
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    .container .hero-content .header  .menu{
+        visibility: unset;
+        font-size: 1.5rem;
+       color: white;
+        cursor: pointer;
+    }
+    .container .hero-content .header  .menu:hover{
+        color: #23A6F0;
+    }
+    
+    .main .hero-content .bottom {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container .hero-content .hero-mid-content{
+        display: flex;
+        flex-direction: column;
+        margin-top: 3vh;
+    }
+    .container .hero-content .hero-mid-content .top h1{
+        font-size: 1.8rem;
+        width: 12rem;
+    }
+    .container .hero-content .hero-mid-content .bottom p{
+        font-size: 1.1rem;
+    }
+    .main .hero-content .hero-mid-content .bottom .buttons{
+        display: flex;
+        gap:1rem;
+       
+    }
+    .main .hero-content .bottom .buttons .btn{
+        /* width: ; */
+        font-size: .9rem;
+        width: 8rem;
+    }
+    .main .relative .card .icon-container ion-icon,.main .products .product .card-1 .icon-container ion-icon{
+        font-size: 2.4rem;
+    }
+    .main .relative .card,.main .products .product .card-1{
+        display: flex;
+        flex-direction: column;
+        height: 14rem;
+    }
+    .main .relative .card h2,.main .products .product .card-1 h2{
+        font-size: 1.01rem;
+        font-weight: bold;
+    }
+    .main .relative .card p,.main .products .product .card-1 p{
+        font-size: 1rem;
+        line-height: 1.8rem;
+    }
+    .main .industry .industry-top h1, .main .pricing .pricing-top h1, .main .pricing .prices-bottom .pricing-card .top h1,.main  .branches .container .branches-text  h2, .main .consult .right h3{
+        font-size: 1.2rem;
+    }
+    .main .industry .industry-top p,  .main .pricing .pricing-top p,.main .pricing .prices-bottom .pricing-card , .main  .branches .container .branches-text  p{
+        margin-top: 1rem;
+        line-height: 1.4rem;
+        font-size: 1rem;
+    }
+    .main .industry .industry-bottom .card-2{
+        display: flex;
+        flex-direction: column;
+        height: 21rem;
+    }
+    .main .industry .industry-bottom .card-2 .card2-top{
+        object-fit: cover;
+        height: 6rem;
+        margin-bottom: 1rem;
+    }
+    .main .industry .industry-bottom .card-2 .card2-bottom .ratings{
+        font-size: .4rem;
+    }
+    .main .news-letter .news-bottom .left h4{
+        font-size: 1rem;
+    }
+    .main .news-letter .news-bottom .right{
+        display: flex;
+        justify-content: space-between;
+    }
+   
+    .main .news-letter .news-bottom .right button{
+        visibility: hidden;
+        position:unset;
+        justify-content: center;
+        margin-left: -5rem;
+    }
+    .main .pricing{
+        margin-bottom: 30rem;
+    }
+    .main .pricing .prices-bottom{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
     .main .footer{
         width: 100%;
-        height: 158%;
+        height: 100%;
+    }
+    .main .footer .container .top{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .main .branches .container{
+        width: 100%;
     }
 }
