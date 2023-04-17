@@ -19,6 +19,7 @@
 }
 body{
     background-color: #f3f3f3;
+    font-family: Montserrat, sans-serif;
 
 }
 .main{
@@ -269,6 +270,20 @@ body{
     font-size: 4rem;
     color:var(--blue)
 }
+.main .relative .three{
+    background-color: #23A6F0;
+    color: white;
+}
+.main .relative .three h2{
+    color: white;
+}
+.main .relative .three  .icon-container ion-icon{
+    color:white;
+}
+.main .relative .three p{
+    color: white;
+}
+
 .main .products{
     background-color: white;
     height: 38%;
@@ -503,6 +518,8 @@ body{
 .main .pricing .prices-bottom .dark{
     background-color: #252B42;
     color:white;
+    height: 75vh;
+
 }
 
 
@@ -788,9 +805,27 @@ body{
     font-size:1.3rem;
     /* padding:.1rem; */
 }
-
+ /* @media screen and (max-width:390px){
+    .main .footer{
+        height: 158%;
+    }
+    .main .news-letter .news-bottom{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+    }
+    .main .news-letter .news-bottom .right button{
+        visibility: hidden;
+    }
+    .main{
+        overflow: hidden;
+    }
+}  */
+ 
 
 @media screen and (max-width:770px){
+    
 
     .main .hero-content .nav{
         visibility:hidden;
@@ -845,7 +880,7 @@ body{
        
     }
     .main .hero-content .bottom .buttons .btn{
-        /* width: ; */
+       
         font-size: .8rem;
         width: 7rem;
     }
@@ -941,7 +976,7 @@ body{
        left: .01rem;
     }
     .main .pricing{
-        margin-bottom: 60rem;
+        margin-bottom: 68rem;
     }
     .main .pricing .prices-bottom .pricing-card .pricing-btn button,.main .consult .left button{
         font-size: 1rem;
@@ -956,10 +991,15 @@ body{
 
     .main .appointment{
         width: 100%;
+        margin-top: 20rem;
     }
-    /* .main .appointment .appointment-form{
-        width: 100%;
-    } */
+    .main .appointment .appointment-form{
+       display: grid;
+       grid-template-columns: 1fr;
+    }
+    .main .appointment .appointment-form .left{
+        visibility: hidden;
+    }
     .main .consult{
         width: 100%;
         display: flex;
@@ -1106,4 +1146,4 @@ body{
     .main .branches .container{
         width: 100%;
     }
-}
+} 
